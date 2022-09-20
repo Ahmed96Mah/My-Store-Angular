@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+}
+
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+  
+a {
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0px 0.4rem;
+    text-decoration: none;
+}
+
+svg {
+    width: 1rem;
+    fill: currentColor;
+    color: white;
+}
