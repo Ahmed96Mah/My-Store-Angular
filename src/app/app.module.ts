@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 import { ProductComponent } from './components/product-list/product/product.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { ProductComponent } from './components/product-list/product/product.comp
     ProductListComponent,
     ProductDetailsComponent,
     CartComponent,
-    CartItemComponent,
     ProductComponent
   ],
   imports: [
