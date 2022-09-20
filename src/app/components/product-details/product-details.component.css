@@ -1,0 +1,81 @@
+.details div a {
+ color: blue;
+ font-size: 0.85rem;
+ display: flex;
+ flex-flow: row nowrap;
+ align-items: center;
+}
+
+.details div a svg {
+    fill: currentColor;
+    color: blue;
+    width: 0.65rem;
+    margin-right: 0.5rem;
+}
+
+.details div img {
+    width: 280px;
+}
+
+.details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 60vw;
+    margin-left: 20vw;
+}
+
+.details p {
+    font-size: 0.95rem;
+}
+
+.details form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.details form select {
+    width: 3.5rem;
+}
+
+.details form input {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    background-color: rgb(39, 39, 243);
+    border: 1.2px solid rgb(39, 39, 243);
+    border-radius: 0.4rem;
+}
+
+.details form input:hover {
+    color: rgb(39, 39, 243);
+    background-color: white;
+}
+
+.details .main {
+    margin-right: 4rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .details div img {
+        width: 80vw;
+    }
+    .details {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    .details .main {
+        margin-right: 0rem;
+    }
+}
