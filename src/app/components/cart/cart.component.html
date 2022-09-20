@@ -18,6 +18,6 @@
         <label>Credit card number</label>
         <input required minlength="16" maxlength="16" type="password" placeholder="(16-digit number)" [(ngModel)]="cardNumber" name="password" />
         <p>We'll never share your payment details with anyone else.</p>
-        <input class="button" type="submit" [disabled]="form.invalid" />
+        <input class="button" type="submit" [disabled]="form.invalid" [class.disabled]="form.invalid" [class.enabled]="!form.invalid" />
     </form>
 </div>
