@@ -1,0 +1,79 @@
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+form label {
+    margin-bottom: 0.35rem;
+}
+
+form input {
+    margin-bottom: 0.75rem;
+}
+
+form p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.container form input {
+    padding: 0.35rem;
+    width: 19rem;
+}
+
+.container form .button {
+    width: auto;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    background-color: rgb(39, 39, 243);
+    border: 1.2px solid rgb(39, 39, 243);
+    border-radius: 0.4rem;
+}
+
+.container form .button:hover {
+    color: rgb(39, 39, 243);
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0rem 5vw;
+}
+
+.cartDiv {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40vw;
+}
+
+.cartDiv .component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 65%;
+    margin-bottom: 2rem;
+}
+
+.cartDiv .component img {
+    width: 6rem;
+    border-radius: 0.75rem;
+}
+
+.cartDiv .component label {
+    margin-right: 0.2rem;
+}
+
+.cartDiv .component input {
+    width: 5rem;
+}
