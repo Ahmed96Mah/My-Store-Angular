@@ -1,0 +1,39 @@
+.product {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5rem;
+}
+
+.product a img {
+    width: 250px;
+    border: 1px solid #33B5E5;
+    padding: 2rem;
+}
+
+.product form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.product form select {
+    width: 3.5rem;
+}
+
+.product form input {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    margin-top: 1.5rem;
+    color: white;
+    background-color: rgb(39, 39, 243);
+    border: 1.2px solid rgb(39, 39, 243);
+    border-radius: 0.4rem;
+}
+
+.product form input:hover {
+    color: rgb(39, 39, 243);
+    background-color: white;
+}
