@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { cartItem } from 'src/app/models/cartItem';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -14,7 +16,7 @@ export class CartComponent implements OnInit, OnDestroy {
   cardNumber: string = '';
   total: number = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private user: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.list = this.cartService.getCartList();
@@ -24,13 +26,14 @@ export class CartComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.total = 0;
     this.list = [];
-  }
-
-  onSubmit(): void {
-    alert('Ok');
     this.username = '';
     this.address = '';
     this.cardNumber = '';
+  }
+
+  onSubmit(user: string, address: string, card: string): void {
+    this.user.saveUser(user, address, card);
+    this.router.navigate(['/confirmation']);
   }
 
   onChange(amount: number, name: string): void{
