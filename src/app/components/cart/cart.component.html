@@ -1,6 +1,6 @@
 <div class="container">
     <div class="cartDiv">
-        <app-cart-item class="appCart" *ngFor="let item of list" [item]="item" (data)="onChange($event)" ></app-cart-item>
+        <app-cart-item class="appCart" *ngFor="let item of list" [item]="item" (changeAmount)="onChange($event)" ></app-cart-item>
         <p>Total: ${{ total }}</p>
     </div>
     <form (ngSubmit)="onSubmit(username, address, cardNumber)" #form="ngForm" >
