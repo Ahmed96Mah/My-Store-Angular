@@ -1,27 +1,41 @@
-# MyStore
+# MyStore: An Angular E-commerce Site (Fullfillment of Udacity's Angular Development Nanodegree)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+## Project Description
 
-## Development server
+An Angular E-commerce website that allows the user to shop from the avaiable products, add products to cart and submit a validated billing form to finish the checkout process.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Operational Steps
 
-## Code scaffolding
+To Start the project, You should follow the following steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1- Install project's dependencies using:
+```
+npm install
+```
 
-## Build
+2- Then, start running the project using:
+```
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3- You can then shop for products on the website.
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Project's Notes
 
-## Running end-to-end tests
+1- The project was divided logically into separate components.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2- The project has 3 services: cart, product & user services.
 
-## Further help
+3- The input & output decorators were used to send data from "parent to child" and "child to parent" respectivly.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4- The user can add products to cart through either the products (main) page or product-details page.
+
+5- When the user reduces the quantity of a product in the cart to 0, the product is automatically removed from the cart and the user is alerted to that change.
+
+6- The cart's checkout-form is validated using Angualr's form validators.
+
+7- When the form is successfully submitted, the user is redirected to the confirmation page.
+
+8- As the user changes the quantity of any product in the cart, the total charge changes to reflect the current charge.
