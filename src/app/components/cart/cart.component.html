@@ -10,7 +10,7 @@
         </div>
         <p>Total: ${{ total }}</p>
     </div>
-    <form (ngSubmit)="onSubmit()" #form="ngForm" >
+    <form (ngSubmit)="onSubmit(username, address, cardNumber)" #form="ngForm" >
         <label>Full name</label>
         <input required minlength="3" placeholder="(minimum 3 characters)" [(ngModel)]="username" name="username" />
         <label>Address</label>
