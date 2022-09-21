@@ -1,0 +1,8 @@
+<div class="component">
+    <img src="{{ item.url }}" />
+    <div>
+        <h4>{{ item.name }}</h4>
+        <p>${{ item.price }}</p>
+        <label for="amount">Amount:</label> <input id="amount" type="number" value="{{ item.amount }}" min="0" [(ngModel)]="item.amount" (ngModelChange)="onChange($event, item.name)" />
+    </div>
+</div>
