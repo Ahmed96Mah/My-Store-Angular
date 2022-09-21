@@ -18,7 +18,10 @@ export class CartService {
     this.cartList.push(cart);
   }
 
-  removeFromCart(name: string): void {}
+  removeFromCart(name: string): cartItem[] {
+    this.cartList = this.cartList.filter(item => item.name !== name);
+    return this.cartList;
+  }
 
   clearCart(): void {
     this.cartList = [];
@@ -33,7 +36,8 @@ export class CartService {
     return this.total;
   }
 
-  updateList(amount: number, name: string): void {
-    this.cartList.forEach(i => { (i.name === name) && (i.amount = amount) })
+  updateList(amount: number, name: string): cartItem[] {
+    this.cartList.forEach(i => { (i.name === name) && (i.amount = amount) });
+    return this.cartList;
   }
 }
