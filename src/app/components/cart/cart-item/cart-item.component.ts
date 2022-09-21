@@ -14,7 +14,7 @@ export class CartItemComponent implements OnInit {
     url: '',
     amount: 1
   };
-  @Output () data: EventEmitter<data> = new EventEmitter;
+  @Output () changeAmount: EventEmitter<data> = new EventEmitter;
   
   constructor() { }
 
@@ -22,7 +22,7 @@ export class CartItemComponent implements OnInit {
   }
 
   onChange(amount: number, name: string): void {
-    this.data.emit({
+    this.changeAmount.emit({
       amount: amount,
       name: name
     });
