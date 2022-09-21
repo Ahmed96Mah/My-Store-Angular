@@ -4,6 +4,11 @@ import { cartItem } from 'src/app/models/cartItem';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 
+type data = {
+  amount: number,
+  name: string
+};
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -36,12 +41,12 @@ export class CartComponent implements OnInit, OnDestroy {
     this.router.navigate(['/confirmation']);
   }
 
-  onChange(amount: number, name: string): void{
-    if(amount < 1) {
-      this.list = this.cartService.removeFromCart(name);
+  onChange(data: data): void{
+    if(data.amount < 1) {
+      this.list = this.cartService.removeFromCart(data.name);
       alert('Removed from cart!');
     }else {
-      this.list = this.cartService.updateList(amount, name);
+      this.list = this.cartService.updateList(data.amount, data.name);
     }
     this.total = this.cartService.calculateTotal();
   }
