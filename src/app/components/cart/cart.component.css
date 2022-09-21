@@ -73,6 +73,10 @@ form p {
     padding: 1.5rem;
 }
 
+.cartDiv .appCart {
+    width: 100%;
+}
+
 .cartDiv .component {
     display: flex;
     flex-flow: row nowrap;
