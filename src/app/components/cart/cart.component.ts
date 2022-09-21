@@ -3,11 +3,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { cartItem } from 'src/app/models/cartItem';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
-
-type data = {
-  amount: number,
-  name: string
-};
+import { data } from 'src/app/models/data';
 
 @Component({
   selector: 'app-cart',
