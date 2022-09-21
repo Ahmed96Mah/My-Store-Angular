@@ -1,10 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { cartItem } from 'src/app/models/cartItem';
-
-type data = {
-  amount: number,
-  name: string
-};
+import { data } from 'src/app/models/data';
 
 @Component({
   selector: 'app-cart-item',
