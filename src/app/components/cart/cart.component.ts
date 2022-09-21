@@ -37,7 +37,12 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   onChange(amount: number, name: string): void{
-    this.cartService.updateList(amount, name);
+    if(amount < 1) {
+      this.list = this.cartService.removeFromCart(name);
+      alert('Removed from cart!');
+    }else {
+      this.list = this.cartService.updateList(amount, name);
+    }
     this.total = this.cartService.calculateTotal();
   }
 }
