@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'details/:id', component: ProductDetailsComponent },
-  { path: 'cart', component: CartComponent }
+  { path: 'cart', component: CartComponent },
+  { path: 'confirmation', component: ConfirmationComponent }
 ];
 
 @NgModule({
