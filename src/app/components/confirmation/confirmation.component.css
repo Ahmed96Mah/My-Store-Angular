@@ -1,0 +1,34 @@
+.confirmContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.confirmContainer .status {
+    font-size: 2rem;
+    color: rgb(110, 224, 186);
+}
+
+.confirmContainer .user {
+    font-weight: bold;
+}
+
+.confirmContainer .price {
+    font-weight: bold;
+}
+
+.confirmContainer button {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    color: white;
+    background-color: rgb(39, 39, 243);
+    border: 1.2px solid rgb(39, 39, 243);
+    border-radius: 0.4rem;
+}
+
+.confirmContainer button:hover {
+    color: rgb(39, 39, 243);
+    background-color: white;
+}
