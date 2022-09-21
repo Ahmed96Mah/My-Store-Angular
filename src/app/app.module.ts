@@ -10,6 +10,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { ProductComponent } from './components/product-list/product/product.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     ProductDetailsComponent,
     CartComponent,
     ProductComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
