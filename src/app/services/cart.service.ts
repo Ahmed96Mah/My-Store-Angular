@@ -15,7 +15,14 @@ export class CartService {
   }
 
   addToCart(cart: cartItem): void {
-    this.cartList.push(cart);
+    const check = this.cartList.filter(p => p.name === cart.name);
+    if (check.length === 0) {
+      this.cartList.push(cart);
+    }else {
+      this.cartList.forEach(p => {
+        (p.name === cart.name) && (p.amount = p.amount + cart.amount);
+      })
+    }
   }
 
   removeFromCart(name: string): cartItem[] {
