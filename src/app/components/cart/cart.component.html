@@ -5,11 +5,25 @@
     </div>
     <form (ngSubmit)="onSubmit(username, address, cardNumber)" #form="ngForm" >
         <label>Full name</label>
-        <input required minlength="3" placeholder="(minimum 3 characters)" [(ngModel)]="username" name="username" />
+        <input required minlength="3" placeholder="(minimum 3 characters)" [(ngModel)]="username" name="username" pattern="[a-zA-Z ]*" #fullName ="ngModel" />
+        <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
+            <p class="error" *ngIf="fullName.errors?.['minlength']">Your name should contain at least 3 characters.</p>
+            <p class="error" *ngIf="fullName.errors?.['pattern']">Your name should consists of characters & spaces only.</p>
+        </div>
+
         <label>Address</label>
-        <input required minlength="6" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address" />
+        <input required minlength="6" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address" #userAddress="ngModel" />
+        <div *ngIf="userAddress.invalid && (userAddress.dirty || userAddress.touched)">
+            <p class="error" *ngIf="userAddress.errors?.['minlength']">Your address should contain at least 6 characters.</p>
+        </div>
+
         <label>Credit card number</label>
-        <input required minlength="16" maxlength="16" type="password" placeholder="(16-digit number)" [(ngModel)]="cardNumber" name="password" />
+        <input required minlength="16" maxlength="16" type="password" placeholder="(16-digit number)" [(ngModel)]="cardNumber" name="password" pattern="[0-9]*" #credit="ngModel" />
+        <div *ngIf="credit.invalid && (credit.dirty || credit.touched)">
+            <p class="error" *ngIf="credit.errors?.['minlength']">Your credit card should have exactly 16 numbers.</p>
+            <p class="error" *ngIf="credit.errors?.['pattern']">Your credit card number shouldn't contain characters or spaces.</p>
+        </div>
+
         <p>We'll never share your payment details with anyone else.</p>
         <input class="button" type="submit" [disabled]="form.invalid" [class.disabled]="form.invalid" [class.enabled]="!form.invalid" />
     </form>
