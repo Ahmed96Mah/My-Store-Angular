@@ -51,6 +51,11 @@ form p {
     background-color: white;
 }
 
+.container form .error {
+    color: red;
+    margin-top: 0;
+}
+
 .container {
     display: flex;
     flex-flow: row wrap;
